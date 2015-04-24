@@ -20,6 +20,8 @@ output FASTA with the same sequence id and description.
 Format of the `seq\_id\_start\_end.dat` and `filter\_fasta\_subseq.py` is consistent with QIIME
 `filter\_fasta.py` that can be used to extract sequences based on seq id.
 
+At present sequence id should be only seen once in `seq\_id\_start\_end.dat`.
+
 ## End position before Start position
 
 In this case we extract sequence from End to Start.
