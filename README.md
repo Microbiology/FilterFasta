@@ -18,7 +18,7 @@ The `seq_id_start_end.dat` has at least 3 columns:
 That extract sequence from start to end position(inclusive) and save it to the 
 output FASTA with the same sequence id and description.
 Format of the `seq_id_start_end.dat` and `filter_fasta_subseq.py` is consistent with QIIME
-`filter\_fasta.py` that can be used to extract sequences based on seq id.
+`filter_fasta.py` that can be used to extract sequences based on seq id.
 
 At present sequence id should be only seen once in `seq_id_start_end.dat`.
 
