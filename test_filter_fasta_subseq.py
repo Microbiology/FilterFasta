@@ -15,6 +15,12 @@ valid = StringIO(
 3\t500\t600
 """)
 
+valid_more_than_3_columns = StringIO(
+"""1\t100\t200\tquickBrownFox
+2\t300\t400\t123
+3\t500\t600
+""")
+
 invalid_start = StringIO(
 """1\tINVALID\t200
 2\t300\t400
@@ -38,6 +44,12 @@ invalid_id_repeated = StringIO(
 class Test_read_id_start_end(unittest.TestCase):
     def test_valid(self):
         id_position = read_id_start_end(valid)
+        self.assertTrue(len(id_position), 3)
+        self.assertTrue(len(id_position["1"]), 2)
+        self.assertTrue(id_position["3"], (500, 600))
+
+    def test_valid_with_many_columns(self):
+        id_position = read_id_start_end(valid_more_than_3_columns)
         self.assertTrue(len(id_position), 3)
         self.assertTrue(len(id_position["1"]), 2)
         self.assertTrue(id_position["3"], (500, 600))

@@ -19,7 +19,7 @@ def read_id_start_end(id_start_end_filehandle):
     for row in reader:
         if len(row) < 3:
             raise ValueError("File should have 3 columns or more, but found: " + str(row))
-        seq_id, start, end = row
+        seq_id, start, end = row[0:3]
         if seq_id in id_pos:
             raise KeyError("Sequence Identifiers should be unique.")
         if not start.isdigit() or not end.isdigit():
