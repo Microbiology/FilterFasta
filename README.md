@@ -10,17 +10,17 @@ The input file for the script is FASTA file and file with seq ids and start, end
 ./filter_fasta_subseq.py -f input.fasta -s seq_id_start_end.dat -o output.fasta
 ```
 
-The `seq\_id\_start\_end.dat` has at least 3 columns:
+The `seq_id_start_end.dat` has at least 3 columns:
 * sequence id
 * start position
 * end position
 
 That extract sequence from start to end position(inclusive) and save it to the 
 output FASTA with the same sequence id and description.
-Format of the `seq\_id\_start\_end.dat` and `filter\_fasta\_subseq.py` is consistent with QIIME
+Format of the `seq_id_start_end.dat` and `filter_fasta_subseq.py` is consistent with QIIME
 `filter\_fasta.py` that can be used to extract sequences based on seq id.
 
-At present sequence id should be only seen once in `seq\_id\_start\_end.dat`.
+At present sequence id should be only seen once in `seq_id_start_end.dat`.
 
 ## End position before Start position
 
